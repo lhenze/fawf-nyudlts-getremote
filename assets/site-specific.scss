@@ -1,0 +1,46 @@
+
+/* ========================================================================== */
+/* Begin site-specific styles */
+/* ========================================================================== */
+
+body, body.ispage.books {
+  .site-title a {
+    font-size: 3vw;
+  
+  }
+  @media (min-width: 601px) {
+    .site-title a {
+      font-size: 3vw;
+     
+    }
+  }
+
+  @media (min-width: 900px) {
+    .site-title a {
+      font-size: 1.9rem;
+   
+    }
+  }
+  
+}
+.item.site-title a:link, .item.site-title a:visited {
+  font-weight:bold;
+  text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff;
+}
+body.ispage.books {
+  .toplogo-nyu.item {
+    border-bottom: 0;
+    border-right: 0;
+    min-width: 100px;
+  }
+  @media (max-width: 400px) {
+    .item.site-title  {
+      flex: 1 1 25%;
+     
+    }
+  }
+}
+.toplogo-nyu a {
+  background: url(/southernworker/images/nyulibraries-logo-purple.svg) no-repeat right top;
+  background-size: contain;
+}

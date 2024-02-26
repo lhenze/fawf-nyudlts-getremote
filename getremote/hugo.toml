@@ -1,0 +1,13 @@
+# Config file: hugo.toml
+
+publishDir = "markdown"
+
+disableKinds = ["taxonomy", "sitemap"]
+
+[outputs]
+  home = ["HTML"]
+  
+[params]
+  pathtoapi = "pathtoapi"
+  
+  

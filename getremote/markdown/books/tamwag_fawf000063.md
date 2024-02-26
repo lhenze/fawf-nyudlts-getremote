@@ -1,0 +1,1 @@
+{"date":"1938-11-01","datetext":"November 1938","ss_book_identifier":"tamwag_fawf000063","ss_publication_date_text":"November 1938","title":"The Fight for Peace and Democracy, November 1938","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000063"}

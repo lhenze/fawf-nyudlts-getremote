@@ -1,0 +1,1 @@
+{"date":"1933-11-01","datetext":"November 1933","ss_book_identifier":"tamwag_fawf000001","ss_publication_date_text":"November 1933","title":"The Fight Against War and Fascism, November 1933","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000001"}

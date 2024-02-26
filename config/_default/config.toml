@@ -1,0 +1,60 @@
+baseURL = "http://localhost/fawf"
+languageCode = "en-us"
+title = "The Fight Against War and Fascism"
+preserveTaxonomyNames = true
+paginate = 100
+publishDir = "docs"
+assetDir = "assets"
+contentDir = "getremote/markdown"
+
+theme = ["serials-hugo-basetheme"]
+
+# Don't generate index pages for "books" or "pages" sections
+disableKinds = ["section"]
+
+[markup.goldmark.renderer]
+unsafe= true
+
+[params]
+  baseViewerURL = "https://sites.dlib.nyu.edu"
+  sassOutputFormat = "expanded"
+  enableSourceMap = "true"
+  description = "The Fight Against War and Fascism (1933-1939) was published by the American League Against War and Fascism. It was an initiative of the Communist Party, USA, but its membership was very broad and included members of other left-wing groups, trade unions, and African American civic organizations."
+  publisherName = "American League Against War and Fascism"
+  #publisherId = "http://id.loc.gov/authorities/names/n78018818"
+  homepageabouttext = "<em>The Fight Against War and Fascism</em> (1933-1939) was published by the American League Against War and Fascism. It was an initiative of the Communist Party, USA, but its membership was very broad and included members of other left-wing groups, trade unions, and African American civic organizations."
+  subjectsstring = "Peace -- Periodicals, World politics -- 1933-1945 -- Periodicals, Fascism -- Periodicals, Anti-fascist movements -- United States -- Periodicals"
+[taxonomies]
+  
+  
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+  [menu]
+
+ [[menu.footer]]
+    identifier = "home"
+    name = "Home"
+    url = ""
+    weight = -110
+
+
+   [[menu.footer]]
+    identifier = "about"
+    name = "About"
+    url = "about/"
+    weight = -105
+
+  [[menu.footer]]
+    identifier = "external_1"
+    name = "Accessibility"
+    url = "https://www.nyu.edu/footer/accessibility.html"
+    weight = -90
+
+  [[menu.footer]]
+    identifier = "external_2"
+    name = "Feedback"
+    url = "https://nyu.qualtrics.com/jfe/form/SV_8zQOuCi9g0JUVsV?site=fawf&amp;l=f"
+    weight = -100

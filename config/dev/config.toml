@@ -1,0 +1,6 @@
+baseURL = "http://devweb1.dlib.nyu.edu/fawf"
+
+[params]
+	baseViewerURL = "http://sites.dlib.nyu.edu"
+	sassOutputFormat = "expanded"
+  	enableSourceMap = "true"

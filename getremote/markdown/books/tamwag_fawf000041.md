@@ -1,0 +1,1 @@
+{"date":"1937-02-01","datetext":"February 1937","ss_book_identifier":"tamwag_fawf000041","ss_publication_date_text":"February 1937","title":"The Fight Against War and Fascism, February 1937","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000041"}

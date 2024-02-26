@@ -1,0 +1,29 @@
+{{ with resources.GetRemote . }}
+  {{ with .Err }}
+      {{ errorf "%s" . }}
+  {{ else }}
+    {{/* .Content is the hugo keyword for resultant data */}}
+    {{/* Transform that Content into a usable data structure */}}  
+    {{ $monsters := unmarshal .Content }}
+    {{/* Iterate over each item in that structure */}}
+    {{ $monstersdocs := index $monsters "response" "docs" }}
+    {{ range $monstersdocs }}
+      {{/* Set date to first publication date (it is a slice) */}}
+      {{ $date := time.Format "2006-01-02" (index .dm_field_publication_date 0) }} 
+      {{ $monster := dict 
+          "datetext" .ss_publication_date_text
+          "date" $date
+          "ss_book_identifier" .ss_book_identifier
+          "ss_publication_date_text" .ss_publication_date_text
+          "title" .ss_title_long
+          "viewerURL" .url
+      }}
+      {{ $filename := printf "books/%s.md" .ss_book_identifier }}
+      {{ $file := dict }}
+      {{ $string :=  jsonify $monster }}
+      {{ $file = $string | resources.FromString $filename }}
+      {{ $output := $file.RelPermalink }}
+    {{ end -}}
+  {{ end }}
+{{ end -}}
+{{- return true -}}

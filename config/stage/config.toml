@@ -1,0 +1,6 @@
+baseURL = "http://stageweb1.dlib.nyu.edu/fawf"
+
+[params]
+	baseViewerURL = "https://stage-sites.dlib.nyu.edu"
+	sassOutputFormat = "compressed"
+	enableSourceMap = "false"

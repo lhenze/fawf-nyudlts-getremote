@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+
+<main id="main-content">
+  <h1 class="page-title">{{ .Title }}</h1>
+<iframe class="viewer widget book" data-sequence="1" data-baseviewerurl="{{- .Site.Params.baseViewerURL -}}" data-identifier="{{- .Params.ss_book_identifier -}}" title="View Book: {{ .Title }}" src = "{{- .Params.viewerURL -}}/#1" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>
+</main>
+{{- partial "loading-animation-bubbling.html" . }}
+{{- partial "footer.html" . -}}

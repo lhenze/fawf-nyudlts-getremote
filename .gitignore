@@ -1,0 +1,13 @@
+
+
+*.content
+*.content
+resources/_gen/*
+*.json
+
+
+deploy.sh
+
+.hugo_build.lock
+
+getremote/markdown/pathtoapi.txt

@@ -1,0 +1,6 @@
+baseURL = "https://dlib.nyu.edu/fawf"
+googleAnalytics = "G-76T91ZKDVJ"
+[params]
+	baseViewerURL = "https://sites.dlib.nyu.edu"
+	sassOutputFormat = "compressed"
+  	enableSourceMap = "false"
