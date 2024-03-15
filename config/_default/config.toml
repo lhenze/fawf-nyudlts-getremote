@@ -32,7 +32,7 @@ unsafe= true
   section = ["HTML"]
   page = ["HTML"]
 
-  [menu]
+[menu]
 
  [[menu.footer]]
     identifier = "home"
@@ -58,3 +58,11 @@ unsafe= true
     name = "Feedback"
     url = "https://nyu.qualtrics.com/jfe/form/SV_8zQOuCi9g0JUVsV?site=fawf&amp;l=f"
     weight = -100
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "getremote/markdown/assets"
+    target = "assets"

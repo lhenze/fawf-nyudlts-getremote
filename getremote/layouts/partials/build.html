@@ -10,7 +10,8 @@
     {{ range $monstersdocs }}
       {{/* Set date to first publication date (it is a slice) */}}
       {{ $date := time.Format "2006-01-02" (index .dm_field_publication_date 0) }} 
-      {{ $thumbnail := urls.JoinPath "https://stage-sites.dlib.nyu.edu/viewer/api/image/books/" .ss_book_identifier  "/1/full/150,/0/default.jpg" }}
+      {{ $remotethumbnailpath := urls.JoinPath "https://sites.dlib.nyu.edu/viewer/api/image/books/" .ss_book_identifier  "/1/full/150,/0/default.jpg" }}
+      {{- $localthumbnailpath :=  path.Join "/assets/images"  ( ".jpg"  | printf "%s%s" .ss_book_identifier ) -}}
       {{ $monster := dict 
           "datetext" .ss_publication_date_text
           "date" $date
@@ -18,13 +19,33 @@
           "ss_publication_date_text" .ss_publication_date_text
           "title" .ss_title_long
           "viewerURL" .url
-          "thumbnail" $thumbnail
+          "remotethumbnailpath" $remotethumbnailpath
       }}
       {{ $filename := printf "books/%s.md" .ss_book_identifier }}
       {{ $file := dict }}
       {{ $string :=  jsonify $monster }}
       {{ $file = $string | resources.FromString $filename }}
       {{ $output := $file.RelPermalink }}
+      {{/*   Now write the thumbnails  */}}
+        
+      {{- with resources.GetRemote $remotethumbnailpath -}}
+        {{- with .Err }}
+          {{- errorf "%s" . }}
+          {{- errorf "resources.GetRemote failed. Dividing by zero to halt the program." -}}
+          {{- div 0 0 -}}
+        {{- else -}}
+          {{- with resources.Copy $localthumbnailpath . -}}
+            
+            {{ .RelPermalink }}
+            {{- warnf "success: copied image to %s" .RelPermalink -}}
+            {{- printf "success: copied image to %s" .RelPermalink -}}
+          {{- end -}}
+        {{- end -}}
+      {{- else -}}
+        {{- errorf "resources.GetRemote failed. Dividing by zero to halt the program." -}}
+        {{- div 0 0 -}}
+      {{- end -}}
+
     {{ end -}}
   {{ end }}
 {{ end -}}

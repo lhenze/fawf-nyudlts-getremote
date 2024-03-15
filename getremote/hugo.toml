@@ -8,6 +8,6 @@ disableKinds = ["taxonomy", "sitemap"]
   home = ["HTML"]
   
 [params]
-  pathtoapi = "pathtoapi"
+  pathtoapi = "http://discovery1.dlib.nyu.edu/solr/viewer/select?indent=on&q=*:*&fq=sm_collection_code:fawf&wt=json&rows=300"
   
   
