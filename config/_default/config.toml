@@ -4,7 +4,6 @@ title = "The Fight Against War and Fascism"
 preserveTaxonomyNames = true
 paginate = 100
 publishDir = "docs"
-assetDir = "assets"
 contentDir = "getremote/markdown"
 
 theme = ["serials-hugo-basetheme"]
