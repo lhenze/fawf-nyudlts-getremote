@@ -65,3 +65,9 @@ unsafe= true
   [[module.mounts]]
     source = "getremote/markdown/assets"
     target = "assets"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "getremote/markdown"
+    target = "content"
