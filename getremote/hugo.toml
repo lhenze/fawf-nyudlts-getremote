@@ -11,5 +11,6 @@ cleanDestinationDir = true
   
 [params]
   pathtoapi = "http://discovery1.dlib.nyu.edu/solr/viewer/select?indent=on&q=*:*&fq=sm_collection_code:fawf&wt=json&rows=1000"
+  # pathtoapi = "http://discovery1.dlib.nyu.edu/solr/viewer/select?indent=on&q=*:*&fq=bundle:dlts_book&fq=sm_collection_partner_code:tamwag&wt=json&rows=1000"
   
   
