@@ -1,0 +1,22 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "PublicationIssue",
+    "name": "{{ .Title }}",
+    "url" : "{{ .Permalink }}",
+    "image" : "{{ .Params.ss_representative_image }}",
+    "datePublished": "{{ .Date.Format "2006-01-02" }}",
+    "inLanguage": [{
+    	"@type": "Language",
+    	"name": "English"
+    }],
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ .Site.Params.publisherName | jsonify }}
+      {{ with .Site.Params.publisherId -}}, "@id": "{{ .  | jsonify -}}"{{- end -}}
+    },
+    "description": "{{ .Site.Params.Description }}",
+    "provider": {
+        "name":"New York University: The Tamiment Library and Robert F. Wagner Labor Archives",
+        "url":"https://library.nyu.edu/about/collections/special-collections-and-archives/tamiment-wagner-archives/"
+    }
+}
