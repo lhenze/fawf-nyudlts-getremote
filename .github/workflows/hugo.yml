@@ -51,7 +51,9 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo --source "getremote" \
+          hugo \
+            --cleanDestinationDir
+            --source "getremote" 
             --baseURL "${{ steps.pages.outputs.base_url }}/"      
       - name: Build with Hugo
         env:
@@ -60,6 +62,7 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
+            --cleanDestinationDir
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
