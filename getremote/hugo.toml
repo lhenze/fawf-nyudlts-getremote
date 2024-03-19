@@ -6,6 +6,8 @@ disableKinds = ["taxonomy", "sitemap"]
 
 cleanDestinationDir = true
 
+timeout = "300s"
+
 [outputs]
   home = ["HTML"]
   
