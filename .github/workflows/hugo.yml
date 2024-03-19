@@ -52,7 +52,7 @@ jobs:
           HUGO_ENV: production
           HUGO_SOURCE: getremote
         run: |
-          hugo \
+            rm -rf getremote/output && hugo \
             --source "getremote" 
       - name: Build with Hugo
         env:
