@@ -1,0 +1,59 @@
+{{ partial "header.html" . }}
+<main id="main-content">
+  <div class="items">
+    {{ if .Site.Params.homepageabouttext -}}
+    <div class="intro item itemwide">
+      <p>{{ .Site.Params.homepageabouttext | safeHTML }} <a href="{{ .Site.BaseURL  | relURL }}/about" class="readmore" aria-label="Read more about {{ .Title }}">READ&nbsp;MORE…</a></p>
+    </div>
+    {{- end -}}
+    <div class="item itemspecial">
+      <div class="newsitem">
+        <div class="meta">
+          <div>
+            <span class="md_label">Title:</span> <h1 class="md_title">{{ .Title }}</h1>
+          </div>
+          {{ if .Site.Params.authorname -}}
+          <div>
+            <span class="md_label">Author:</span> <span>{{ .Site.Params.authorname }}</span>
+          </div>{{- end -}}
+          {{ if .Site.Params.publishername -}}
+          <div>
+            <span class="md_label">Publisher:</span> <span>{{ .Site.Params.publishername }}</span>
+          </div>{{- end -}}
+          {{ if .Site.Params.organizationname -}}
+          <div>
+            <span class="md_label">Organization:</span> <span>{{ .Site.Params.organizationname }}</span>
+          </div>{{- end -}}
+          {{ if .Site.Params.placeofpublication -}}
+          <div>
+            <span class="md_label">Place of Publication:</span> <span>{{ .Site.Params.placeofpublication }}</span>
+          </div>{{- end -}}
+          <div class="md_subjects">
+            <span class="md_label">Subject:</span> {{ .Site.Params.subjectsstring }}
+          </div>
+          {{ if .Site.Params.homepagespecialfile }}
+          <div  class="index_link meta-link"><a class="readmore" href="{{- .Site.Params.homepagespecialfile | safeHTML -}}"> <span class="icon ext-link-icon" aria-hidden="true" role="presentation">{{- partial "svgs/pdf.svg" (dict "fill" "#c50f3c" "width" 14 "height" 17 ) -}}</span><span>Collection index (PDF)</span> </a></div>
+          {{ end }}
+          {{ if .Site.Params.bobcatrecord }}
+          <div  class="bobcat_record meta-link"><a target = "_blank" class="readmore" href="{{ .Site.Params.bobcatrecord | safeHTML }}"><span class="icon" aria-hidden="true" role="presentation">{{- partial "svgs/external-links.svg" (dict "fill" "#c50f3c" "width" 14 "height" 12 ) -}}</span><span>Bobcat record</span> </a></div>
+          {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="items all-thumbs">
+    {{ range ((where .Site.RegularPages "Type" "books").ByDate).ByParam "ss_book_identifier" }}
+      {{ partial "card-titleonly.html" . }}
+    {{ end }}
+    <article class="item empty-article" aria-hidden="true">
+      <div class="card">&nbsp;</div>
+    </article>
+    <article class="item empty-article" aria-hidden="true">
+      <div class="card">&nbsp;</div>
+    </article>
+      <article class="item empty-article" aria-hidden="true">
+      <div class="card">&nbsp;</div>
+    </article>
+  </div>
+</main>
+{{ partial "footer.html" . }}
