@@ -4,10 +4,12 @@ publishDir = "output"
 
 disableKinds = ["taxonomy", "sitemap"]
 
+cleanDestinationDir = true
+
 [outputs]
   home = ["HTML"]
   
 [params]
-  pathtoapi = "http://discovery1.dlib.nyu.edu/solr/viewer/select?indent=on&q=*:*&fq=sm_collection_code:fawf&wt=json&rows=300"
+  pathtoapi = "http://discovery1.dlib.nyu.edu/solr/viewer/select?indent=on&q=*:*&fq=sm_collection_code:fawf&wt=json&rows=1000"
   
   
