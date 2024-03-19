@@ -28,7 +28,8 @@ You need to have Go installed.
 
 ###  Build -- all in one
 
-  * rm -rf getremote/output/books && hugo  --cleanDestinationDir --ignoreCache -s "getremote" && hugo --cleanDestinationDir
+  * rm -rf getremote/output && hugo --cleanDestinationDir --ignoreCache -s "getremote" && hugo --cleanDestinationDir
+  * rm -rf getremote/output && hugo -s "getremote" && hugo --cleanDestinationDir
 
 ###  Build -- after content is generated
 
