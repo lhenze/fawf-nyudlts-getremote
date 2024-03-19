@@ -70,3 +70,5 @@ unsafe= true
   [[module.mounts]]
     source = "getremote/output"
     target = "content"
+  [[module.imports]]
+    path = "github.com/NYULibraries/serials-hugo-basetheme"
