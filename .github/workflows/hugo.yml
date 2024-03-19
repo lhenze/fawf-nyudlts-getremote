@@ -53,7 +53,7 @@ jobs:
         run: |
           hugo \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-            -s "getremote"
+            --source "./getremote"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
