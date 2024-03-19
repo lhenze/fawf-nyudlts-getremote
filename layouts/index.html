@@ -39,12 +39,17 @@
           {{ end }}
           </div>
         </div>
-      </div>
+      </div>  
+
     </div>
     <div class="items all-thumbs">
-    {{ range ((where .Site.RegularPages "Type" "books").ByDate).ByParam "ss_book_identifier" }}
-      {{ partial "card-titleonly.html" . }}
-    {{ end }}
+      {{ $bookpages :=  where .Site.RegularPages "Type" "books" }}   
+      {{ range $bookpages.GroupByDate "January 2006" "asc" }}
+        {{ range .ByParam "ss_book_identifier" }}
+          {{ partial "card-titleonly.html" . }}
+        {{ end }}
+      {{ end }}
+
     <article class="item empty-article" aria-hidden="true">
       <div class="card">&nbsp;</div>
     </article>
