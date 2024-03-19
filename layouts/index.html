@@ -42,12 +42,14 @@
       </div>  
     </div>
     <div class="items all-thumbs">
-      {{- $bookpages :=  where .Site.RegularPages "Type" "books" }}   
+      {{- $bookpages :=  where .Site.RegularPages "Type" "books" }}
+      {{- /*  We can't simply sort by date, since some books have the same official date (month / year is maximum granularity ).  So instead we group by date and then sort by ID, which coincidentally seems to work.  I don't know if this will always work.  -lh435  */ -}}
       {{ range $bookpages.GroupByDate "January 2006" "asc" }}
         {{- range .ByParam "ss_book_identifier" }}
           {{ partial "card-titleonly.html" . }}
         {{- end }}
-      {{- end }}
+      {{- end }} 
+      {{/*  These three empty divs are here for flexbox layout balance.   */ -}}
       <article class="item empty-article" aria-hidden="true">
         <div class="card">&nbsp;</div>
       </article>
