@@ -46,8 +46,14 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Get Remote Data with Hugo
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            -s "getremote"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
