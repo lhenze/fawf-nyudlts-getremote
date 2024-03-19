@@ -52,9 +52,9 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --cleanDestinationDir
             --source "getremote" 
-            --baseURL "${{ steps.pages.outputs.base_url }}/"      
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --cleanDestinationDir
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
