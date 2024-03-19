@@ -5,8 +5,6 @@ preserveTaxonomyNames = true
 paginate = 100
 publishDir = "docs"
 
-theme = ["serials-hugo-basetheme"]
-
 # Don't generate index pages for "books" or "pages" sections
 disableKinds = ["section"]
 
