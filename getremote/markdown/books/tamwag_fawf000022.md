@@ -1,1 +1,0 @@
-{"date":"1935-08-01","datetext":"August 1935","remotethumbnailpath":"https://sites.dlib.nyu.edu/viewer/api/image/books/tamwag_fawf000022/1/full/150,/0/default.jpg","ss_book_identifier":"tamwag_fawf000022","ss_publication_date_text":"August 1935","title":"The Fight Against War and Fascism, August 1935","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000022"}

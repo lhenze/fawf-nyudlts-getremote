@@ -1,1 +1,0 @@
-{"date":"1939-05-01","datetext":"May 1939","remotethumbnailpath":"https://sites.dlib.nyu.edu/viewer/api/image/books/tamwag_fawf000069/1/full/150,/0/default.jpg","ss_book_identifier":"tamwag_fawf000069","ss_publication_date_text":"May 1939","title":"The Fight for Peace and Democracy, May 1939","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000069"}

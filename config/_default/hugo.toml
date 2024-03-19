@@ -4,7 +4,6 @@ title = "The Fight Against War and Fascism"
 preserveTaxonomyNames = true
 paginate = 100
 publishDir = "docs"
-contentDir = "getremote/markdown"
 
 theme = ["serials-hugo-basetheme"]
 
@@ -63,11 +62,11 @@ unsafe= true
     source = "assets"
     target = "assets"
   [[module.mounts]]
-    source = "getremote/markdown/assets"
+    source = "getremote/output/assets"
     target = "assets"
   [[module.mounts]]
     source = "content"
     target = "content"
   [[module.mounts]]
-    source = "getremote/markdown"
+    source = "getremote/output"
     target = "content"

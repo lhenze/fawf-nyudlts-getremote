@@ -1,0 +1,1 @@
+{"date":"1936-04-01","datetext":"April 1936","remotethumbnailpath":"https://sites.dlib.nyu.edu/viewer/api/image/books/tamwag_fawf000030/1/full/250,/0/default.jpg","ss_book_identifier":"tamwag_fawf000030","ss_publication_date_text":"April 1936","title":"The Fight Against War and Fascism, April 1936","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000030"}

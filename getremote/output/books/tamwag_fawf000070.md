@@ -1,0 +1,1 @@
+{"date":"1939-06-01","datetext":"June 1939","remotethumbnailpath":"https://sites.dlib.nyu.edu/viewer/api/image/books/tamwag_fawf000070/1/full/250,/0/default.jpg","ss_book_identifier":"tamwag_fawf000070","ss_publication_date_text":"June 1939","title":"The World for Peace and Democracy, June 1939","viewerURL":"https://sites.dlib.nyu.edu/viewer/books/tamwag_fawf000070"}

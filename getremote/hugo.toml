@@ -1,6 +1,6 @@
 # Config file: hugo.toml
 
-publishDir = "markdown"
+publishDir = "output"
 
 disableKinds = ["taxonomy", "sitemap"]
 
